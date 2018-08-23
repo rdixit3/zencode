@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{%block body%}
+<H1><b>ZenCode</b></H1>
+<p>Turn psuedo-code into compilable python code!</p>
+<center>
+<form method='POST' style='width:60%'>
+	<div class="form-group">
+		<textarea class='form-control' id='code' maxlength='1000' name='code' placeholder='Type psuedocode here!'  rows = 8></textarea>
+		</br>
+		<button type="submit" class="btn btn-myButton" value='convert' name='submit'>Generate Code</button>
+		{%if hasCode%}
+		<button type="submit" class="btn btn-button2" value='textMe' name='submit'>Text Me</button>
+		{%endif%}
+		</br>
+		</br>
+		<p>
+		{{code}}
+		</p>
+	</div>
+</form>
+</center>
+</br>
+</br>
+</br>
+</br>
+<footer style='bottom:0'>
+  <p><i>Copyright 2017 Matthew Fan and Rohan Dixit</i></p>
+</footer>
+<!--p style='bottom: 0;float:right;text-align:right;margin:auto;position: absolute;'>Copyright 2017 Matthew Fan and Rohan Dixit</p-->
+{%endblock%}
